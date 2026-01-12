@@ -1,0 +1,15 @@
+[project]
+name = "agente-host"
+version = "0.1.0"
+description = "Agente Host para la programación de amigos A2A"
+requires-python = ">=3.10"
+dependencies = [
+    "google-adk>=1.2.1",
+    "a2a-sdk>=0.2.5",
+    "nest-asyncio>=1.6.0",
+    "python-dotenv",
+    "click",
+    "uvicorn",
+    "google-generativeai",
+    "httpx",
+]
