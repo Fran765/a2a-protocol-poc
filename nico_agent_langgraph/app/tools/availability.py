@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 from langchain_core.tools import tool
-from schemas import AvailabilityToolInput
-from utils import NICO_CALENDAR
+from nico_agent_langgraph.app.models.tool_input import AvailabilityToolInput
+from nico_agent_langgraph.app.helpers.calendar_mock import NICO_CALENDAR
 
 @tool(args_schema=AvailabilityToolInput)
 def get_availability(date_range: str) -> str:

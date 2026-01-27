@@ -1,4 +1,3 @@
-from typing import Literal
 from pydantic import BaseModel, Field
 
 class AvailabilityToolInput(BaseModel):
@@ -9,8 +8,3 @@ class AvailabilityToolInput(BaseModel):
                      " '2025-10-01' o '2025-10-01 a 2025-10-03'."
         )
     )
-
-class ResponseFormat(BaseModel):
-    """The output format for the agent's response."""
-    status: Literal["input_required", "completed", "error"] = "input_required"
-    message: str

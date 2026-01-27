@@ -12,6 +12,7 @@ from a2a.types import (
 )
 from agent import create_agent
 from agent_executor import BrunoAgentExecutor
+from exceptions.apikey_exception import MissingAPIKeyError
 from dotenv import load_dotenv
 from google.adk.artifacts import InMemoryArtifactService
 from google.adk.memory.in_memory_memory_service import InMemoryMemoryService
@@ -23,15 +24,11 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-class MissingAPIKeyError(Exception):
-    """Custom exception for missing API key."""
-    pass
-
 @click.command()
 @click.option('--host', 'host', default='localhost')
 @click.option('--port', 'port', default=10003)
 def main(host, port):
-    """Inicio del servidor para el agente."""
+    """ Punto de inicio al servidor de BrunoAgent."""
 
     try:
         if not os.getenv("GOOGLE_API_KEY"):

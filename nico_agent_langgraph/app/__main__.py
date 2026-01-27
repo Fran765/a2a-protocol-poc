@@ -18,15 +18,13 @@ from a2a.types import (
 )
 from agent import NicoAgent
 from agent_executor import NicoAgentExecutor
+from exceptions.apikey_exception import MissingAPIKeyError
 from dotenv import load_dotenv
 
 load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
-class MissingAPIKeyError(Exception):
-    """ Excepcion para cuando falta la API key. """
 
 @click.command()
 @click.option('--host', 'host', default='localhost')
