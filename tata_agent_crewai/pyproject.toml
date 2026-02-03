@@ -1,0 +1,14 @@
+[project]
+name = "tata-agent-crewia"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "a2a-sdk>=0.3.22",
+    "crewai[google-genai,tools]>=1.8.1",
+    "google-generativeai>=0.8.6",
+    "pydantic>=2.11.10",
+    "python-dotenv>=1.1.1",
+    "uvicorn>=0.40.0",
+]
